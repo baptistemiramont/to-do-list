@@ -11,10 +11,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- Scripts -->
+    <script type="module" src="./assets/scripts/app.js" defer></script>
   </head>
 
   <body>
     <div id="app" class="app">
+      <!-- Header -->
       <header class="header">
         <p class="header__logo">To <span class="header__logo--highlight">do</span></p>
         <a href="https://github.com/baptistemiramont/to-do-list" target="_blank" rel="noopener noreferrer">
@@ -22,6 +25,7 @@
         </a>
       </header>
       <main class="main">
+        <!-- Title section -->
         <div class="titleContainer">
           <h1 class="titleContainer__title">Manage your daily tasks with a minimalist to-do list</h1>
         </div>
@@ -30,49 +34,31 @@
             <input type="text" placeholder="Add mew features" class="formContainer__formNewTask formContainer__formNewTask--input">
             <input type="submit" value="create" class="formContainer__formNewTask formContainer__formNewTask--submit">
           </form>
+          <div id="alertBox"></div>
         </div>
+        <!-- Filter section (mobile/tablet only) -->
         <div class="filterContainer">
           <button class="filterContainer__button filterContainer__button--all activeFilter">all</button>
           <button class="filterContainer__button filterContainer__button--todo">to do</button>
           <button class="filterContainer__button filterContainer__button--done">done</button>
         </div>
+        <!-- Lists container -->
         <div class="listsContainer">
+          <!-- To do list -->
           <div class="listsContainer__list listsContainer__list--todo">
             <h2 class="listsContainer__listTitle listsContainer__listTitle--todo">To do</h2>
             <ul class="listsContainer__taskContainer listsContainer__taskContainer--todo">
-              <li class="task">
-                <div class="task__infos">
-                  <input type="checkbox" class="task__checkbox">
-                  <div class="task__infos-text">
-                    <p class="task__infos-text-label">
-                      A task to do
-                    </p>
-                    <time class="task__infos-text-time" datetime="2022-09-09">Sep 09 2022</time>
-                  </div>
-                </div>
-                <span class="task__trashIcon icon-trash"></span>
-              </li>
             </ul>
           </div>
+          <!-- Done list -->
           <div class="listsContainer__list listsContainer__list--done">
             <h2 class="listsContainer__listTitle listsContainer__listTitle--done">Done</h2>
             <ul class="listsContainer__taskContainer listsContainer__taskContainer--done">
-              <li class="task">
-                <div class="task__infos">
-                  <input type="checkbox" class="task__checkbox">
-                  <div class="task__infos-text">
-                    <p class="task__infos-text-label">
-                      A task to do
-                    </p>
-                    <time class="task__infos-text-time" datetime="2022-09-09">Sep 09 2022</time>
-                  </div>
-                </div>
-                <span class="task__trashIcon icon-trash"></span>
-              </li>
             </ul>
           </div>
         </div>
       </main>
+      <!-- Footer -->
       <footer class="footer">
         <div class="copyrightContainer">
           <p class="copyrightContainer__author">
@@ -81,13 +67,13 @@
         </div>
       </footer>
     </div>
-    <template>
+    <!-- Task template -->
+    <template id="taskTemplate">
       <li class="task">
         <div class="task__infos">
           <input type="checkbox" class="task__checkbox">
           <div class="task__infos-text">
             <p class="task__infos-text-label">
-              A task to do
             </p>
             <time class="task__infos-text-time" datetime="2022-09-09">Sep 09 2022</time>
           </div>

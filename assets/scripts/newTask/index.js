@@ -1,0 +1,63 @@
+export const newTask = {
+  todoTaskList: document.querySelector('.listsContainer__taskContainer--todo'),
+  newTaskForm: document.querySelector('.formContainer__form'),
+  newTaskInput: document.querySelector('.formContainer__formNewTask--input'),
+  alertBox: document.querySelector('#alertBox'),
+
+  init: function () {
+    console.log('newTask init');
+    newTask.newTaskForm.addEventListener('submit', newTask.handleSubmitForm);
+  },
+
+  handleSubmitForm: function (event) {
+    event.preventDefault();
+    newTask.createNewTask(newTask.getInputValue());
+    newTask.newTaskForm.reset();
+  },
+
+  getInputValue: function () {
+    let newTaskInputValue = newTask.newTaskInput.value;
+    return newTaskInputValue;
+  },
+
+  createNewTask: function (newTaskValue) {
+    const date = new Intl.DateTimeFormat('en-US',
+      {
+        year: "numeric",
+        month: "short",
+        day: "numeric"
+      }).format(Date.now());
+    const taskTemplate = document.querySelector('#taskTemplate').content.cloneNode(true);
+    // Task label
+    taskTemplate.querySelector('.task__infos-text-label').textContent = newTaskValue;
+    // Task time creation
+    taskTemplate.querySelector('.task__infos-text-time').textContent = date;
+
+    // Display alert if new task input is empty
+    if (!newTaskValue) {
+      newTask.removeAlerts(newTask.alertBox);
+      newTask.alertBox.appendChild(newTask.createAlert());
+    } else {
+      newTask.removeAlerts(newTask.alertBox);
+      newTask.addNewTaskToList(taskTemplate);
+    }
+  },
+
+  addNewTaskToList: function (newTaskToAdd) {
+    newTask.todoTaskList.appendChild(newTaskToAdd);
+  },
+
+  createAlert: function () {
+    const alert = document.createElement('p');
+    alert.setAttribute('class', 'alert');
+    alert.textContent = 'Le champs ne peut etre vide !';
+    return alert;
+  },
+
+  removeAlerts: function (alertContainer) {
+    const messages = alertContainer.querySelectorAll('.alert');
+    for (const message of messages) {
+      message.remove();
+    }
+  }
+}
