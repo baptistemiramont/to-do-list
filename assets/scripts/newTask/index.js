@@ -1,3 +1,6 @@
+import { taskTodo } from '../taskTodo';
+import { deleteTask } from '../deleteTask';
+
 export const newTask = {
   todoTaskList: document.querySelector('.listsContainer__taskContainer--todo'),
   newTaskForm: document.querySelector('.formContainer__form'),
@@ -5,7 +8,6 @@ export const newTask = {
   alertBox: document.querySelector('#alertBox'),
 
   init: function () {
-    console.log('newTask init');
     newTask.newTaskForm.addEventListener('submit', newTask.handleSubmitForm);
   },
 
@@ -44,13 +46,15 @@ export const newTask = {
   },
 
   addNewTaskToList: function (newTaskToAdd) {
-    newTask.todoTaskList.appendChild(newTaskToAdd);
+    newTask.todoTaskList.prepend(newTaskToAdd);
+    taskTodo.init();
+    deleteTask.init();
   },
 
   createAlert: function () {
     const alert = document.createElement('p');
     alert.setAttribute('class', 'alert');
-    alert.textContent = 'Le champs ne peut etre vide !';
+    alert.textContent = 'The field can\'t be empty !';
     return alert;
   },
 

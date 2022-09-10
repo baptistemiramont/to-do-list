@@ -2,7 +2,6 @@ import { newTask } from './newTask';
 
 const app = {
   init: function () {
-    console.log('app init');
     newTask.init();
   }
 }
