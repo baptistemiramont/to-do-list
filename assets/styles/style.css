@@ -204,7 +204,6 @@ body {
   border: 2px solid var(--color-red);
   margin-bottom: 5%;
 }
-
 .listsContainer__list--done {
   border: 2px solid var(--color-green);
 }
@@ -223,6 +222,11 @@ body {
 
 .listsContainer__listTitle--done {
   background-color: var(--color-green);
+}
+
+.listsContainer__taskContainer--done .task__infos-text-label {
+  text-decoration: line-through;
+  color: var(--color-light-black);
 }
 
 /* Filtered list */
@@ -248,7 +252,23 @@ body {
 
 .task__infos {
   display: flex;
+  align-items: center;
   gap: 0.3125rem;
+}
+
+.task__checkbox {
+  cursor: pointer;
+  appearance: none;
+  width: var(--font-size-small-text);
+  height: var(--font-size-small-text);
+  border: 2px solid var(--color-light-black);
+  border-radius: 2px;
+  transition: all 1s ease-in-out;
+}
+
+.task__checkbox:checked {
+  border: none;
+  background: center / contain no-repeat url(../images/checked-icon.svg);
 }
 
 .task__infos-text {
@@ -274,7 +294,10 @@ body {
 
 .task__trashIcon:hover {
   color: var(--color-red);
-  transform: scale(0.9);
+}
+
+.task__trashIcon:active {
+  color: var(--color-red);
 }
 
 /* Footer */

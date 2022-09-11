@@ -3,7 +3,6 @@ export const taskState = {
   todoTaskList: document.querySelector('.listsContainer__taskContainer--todo'),
 
   init: function () {
-    console.log('taskState init');
     const tasks = document.querySelectorAll('.task');
     for (const task of tasks) {
       const checkBox = task.querySelector('.task__checkbox');

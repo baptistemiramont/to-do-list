@@ -1,6 +1,5 @@
 export const filters = {
   init: function () {
-    console.log('filters init');
     const filterbuttons = document.querySelectorAll('.filterContainer__button ');
     for (const button of filterbuttons) {
       button.addEventListener('click', filters.handleFilterClick);

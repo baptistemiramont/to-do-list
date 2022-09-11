@@ -34,7 +34,6 @@ export const newTask = {
     taskTemplate.querySelector('.task__infos-text-label').textContent = newTaskValue;
     // Task time creation
     taskTemplate.querySelector('.task__infos-text-time').textContent = date;
-    taskTemplate.querySelector('li').setAttribute('class', 'task task-todo');
 
     // Display alert if new task input is empty
     if (!newTaskValue) {
