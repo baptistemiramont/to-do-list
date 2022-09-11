@@ -1,4 +1,4 @@
-import { taskTodo } from '../taskTodo';
+import { taskState } from '../taskState';
 import { deleteTask } from '../deleteTask';
 
 export const newTask = {
@@ -34,6 +34,7 @@ export const newTask = {
     taskTemplate.querySelector('.task__infos-text-label').textContent = newTaskValue;
     // Task time creation
     taskTemplate.querySelector('.task__infos-text-time').textContent = date;
+    taskTemplate.querySelector('li').setAttribute('class', 'task task-todo');
 
     // Display alert if new task input is empty
     if (!newTaskValue) {
@@ -47,7 +48,7 @@ export const newTask = {
 
   addNewTaskToList: function (newTaskToAdd) {
     newTask.todoTaskList.prepend(newTaskToAdd);
-    taskTodo.init();
+    taskState.init();
     deleteTask.init();
   },
 
