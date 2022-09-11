@@ -12,6 +12,7 @@ const newTask = {
     event.preventDefault();
     newTask.createNewTask(newTask.getInputValue());
     newTask.newTaskForm.reset();
+    newTask.newTaskInput.focus();
   },
 
   getInputValue: function () {

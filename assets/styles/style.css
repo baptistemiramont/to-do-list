@@ -292,10 +292,6 @@ body {
   transition: all 0.2s ease-in-out;
 }
 
-.task__trashIcon:hover {
-  color: var(--color-red);
-}
-
 .task__trashIcon:active {
   color: var(--color-red);
 }
