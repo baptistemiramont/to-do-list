@@ -283,6 +283,10 @@ body {
   margin-bottom: var(--section-space);
 }
 
+.copyrightContainer__author a {
+  font-style: italic;
+}
+
 /* DESKTOP */
 @media only screen and (min-width: 1000px) {
   .formContainer {

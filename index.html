@@ -4,7 +4,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <!-- SEO -->
+    <title>To do</title>
+    <meta name="description" content="To do is a to-do list project made with vanilla JavaScript">
+    <link rel="shortcut icon" href="./assets/images/favicon.svg" type="image/x-icon">
     <!-- Styles -->
     <link rel="stylesheet" href="./assets/styles/style.css">
     <!-- Fonts -->
@@ -20,7 +23,7 @@
       <!-- Header -->
       <header class="header">
         <p class="header__logo">To <span class="header__logo--highlight">do</span></p>
-        <a href="https://github.com/baptistemiramont/to-do-list" target="_blank" rel="noopener noreferrer">
+        <a title="A GitHub link to the project repository, star it if you enjoyed ❤" href="https://github.com/baptistemiramont/to-do-list" target="_blank" rel="noopener noreferrer">
           <span class="header__githubIcon icon-github"></span>
         </a>
       </header>
@@ -38,9 +41,9 @@
         </div>
         <!-- Filter section (mobile/tablet only) -->
         <div class="filterContainer">
-          <button class="filterContainer__button filterContainer__button--all activeFilter">all</button>
-          <button class="filterContainer__button filterContainer__button--todo">to do</button>
-          <button class="filterContainer__button filterContainer__button--done">done</button>
+          <button aria-label="Display all task lists" class="filterContainer__button filterContainer__button--all activeFilter">all</button>
+          <button aria-label="Display to-do task list" class="filterContainer__button filterContainer__button--todo">to do</button>
+          <button aria-label="Display done task lists" class="filterContainer__button filterContainer__button--done">done</button>
         </div>
         <!-- Lists container -->
         <div class="listsContainer">
@@ -62,7 +65,7 @@
       <footer class="footer">
         <div class="copyrightContainer">
           <p class="copyrightContainer__author">
-            Made by <a href="https://github.com/baptistemiramont" target="_blank" rel="noopener noreferrer">Baptiste</a>
+            Made by <a title="A link to Baptiste Miramont GitHub profile, the developer of this project" href="https://github.com/baptistemiramont" target="_blank" rel="noopener noreferrer">Baptiste</a> 👨🏻‍💻
           </p>
         </div>
       </footer>
