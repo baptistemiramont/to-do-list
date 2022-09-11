@@ -225,6 +225,17 @@ body {
   background-color: var(--color-green);
 }
 
+/* Filtered list */
+.visible {
+  display: block;
+  visibility: visible;
+}
+
+.hidden {
+  display: none;
+  visibility: hidden;
+}
+
 /* Task */
 .task {
   display: flex;
