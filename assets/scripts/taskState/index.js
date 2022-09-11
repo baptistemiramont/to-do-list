@@ -1,4 +1,4 @@
-export const taskState = {
+const taskState = {
   doneTaskList: document.querySelector('.listsContainer__taskContainer--done'),
   todoTaskList: document.querySelector('.listsContainer__taskContainer--todo'),
 

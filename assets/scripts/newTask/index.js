@@ -1,7 +1,4 @@
-import { taskState } from '../taskState';
-import { deleteTask } from '../deleteTask';
-
-export const newTask = {
+const newTask = {
   todoTaskList: document.querySelector('.listsContainer__taskContainer--todo'),
   newTaskForm: document.querySelector('.formContainer__form'),
   newTaskInput: document.querySelector('.formContainer__formNewTask--input'),

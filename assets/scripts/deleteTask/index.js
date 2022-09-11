@@ -1,4 +1,4 @@
-export const deleteTask = {
+const deleteTask = {
   init: function () {
     const tasks = document.querySelectorAll('.task');
     for (const task of tasks) {

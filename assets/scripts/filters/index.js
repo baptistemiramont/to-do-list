@@ -1,4 +1,4 @@
-export const filters = {
+const filters = {
   init: function () {
     const filterbuttons = document.querySelectorAll('.filterContainer__button ');
     for (const button of filterbuttons) {
