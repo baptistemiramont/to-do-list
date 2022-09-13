@@ -1,3 +1,5 @@
+![To do logo](/assets/images/to-do-logo.svg)
+
 # **To do: a to-do list project**
 
 **To do** is a to-do list project made with vanilla JavaScript
