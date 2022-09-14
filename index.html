@@ -20,6 +20,7 @@
     <script type="text/javascript" src="./assets/scripts/filters/index.js" defer></script>
     <script type="text/javascript" src="./assets/scripts/newTask/index.js" defer></script>
     <script src="./assets/scripts/taskState/index.js" defer></script>
+    <script src="./assets/scripts/editTask/index.js" defer></script>
   </head>
 
   <body>
@@ -80,8 +81,8 @@
         <div class="task__infos">
           <input type="checkbox" class="task__checkbox">
           <div class="task__infos-text">
-            <p class="task__infos-text-label">
-            </p>
+            <label for="taskLabel" class="task__infos-text-label"></label>
+            <input name="taskLabel" class="task__infos-text-input hidden">
             <time class="task__infos-text-time" datetime="2022-09-09">Sep 09 2022</time>
           </div>
         </div>
