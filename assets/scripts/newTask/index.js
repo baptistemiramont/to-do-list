@@ -47,6 +47,7 @@ const newTask = {
     newTask.todoTaskList.prepend(newTaskToAdd);
     taskState.init();
     deleteTask.init();
+    editTask.init();
   },
 
   createAlert: function () {
