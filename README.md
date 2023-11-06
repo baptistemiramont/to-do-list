@@ -12,12 +12,12 @@ Try it <a title="To do app" href="https://baptistemiramont.github.io/to-do-list"
 
 Get project dependencies :
 
-```
-yarn
+```sh
+pnpm i
 ```
 
 Run the app on a local server :
 
-```
-yarn dev
+```sh
+pnpm run dev
 ```
